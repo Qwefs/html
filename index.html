@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .gif {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Will you go out with me???</h1>
+        </div>
+        <div class="gif container">
+            <img src="https://i.postimg.cc/Bnx5W6Ls/dudu.gif" alt="Cute animated illustration" width="100" />
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="openPage2()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
+    </div>
+    <script>
+        function moveButton() {
+            var button = document.getElementById('noButton');
+            var container = document.querySelector('.container');
+            var rect = container.getBoundingClientRect();
+            var randomX = Math.random() * (rect.width - button.offsetWidth);
+            var randomY = Math.random() * (rect.height - button.offsetHeight);
+            button.style.position = 'absolute';
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        }
+
+        function openPage2() {
+            // Change the URL to the desired page (e.g., "page2.html")
+            window.open("page2.html", "_blank");
+        }
+    </script>
+<style>
+body {
+    font-family:French Script MT, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightpink;
+}
+
+.container {
+    text-align: center;
+}
+
+.gif {
+    display: block;
+    margin: 0 auto;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: lightskyblue;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: ##FFB6C1; /* lighter shade of sky blue on hover */
+}
+
+</style>
+</body>
+</html>

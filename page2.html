@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffcccc; /* light pink background */
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      .gif_container {
+        margin-top: 20px;
+      }
+
+      .btn {
+        background-color: #ffb6c1; /* light pink button */
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 15px;
+        margin-top: 20px;
+      }
+
+      .btn:hover {
+        background-color: #ff9999; /* lighter shade of pink on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Yeeyy ! Finally</h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://i.postimg.cc/wTDG30TB/yes.gif"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <button class="btn" id="yesButton" onclick="nextPage()">
+        Let's Fix a Date
+      </button>
+    </div>
+
+    <script>
+      function nextPage() {
+        window.open("last_page.html", "_blank");
+      }
+    </script>
+  </body>
+</html>

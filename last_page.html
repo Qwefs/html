@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* Added to stack elements vertically */
+      height: 100vh;
+      background-color: #ffcccc; /* light pink background */
+    }
+
+    .gif_container {
+      text-align: center;
+    }
+
+    .gif_container img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .date_text {
+      font-size: 24px;
+      margin-top: 20px; /* Added space between gif and text */
+      color: black; /* Set text color to black */
+    }
+  </style>
+</head>
+<body>
+  <div class="gif_container">
+    <img src="https://i.postimg.cc/wTDG30TB/yes.gif" alt="Cute animated illustration" />
+  </div>
+  <div class="date_text" id="dateDisplay">
+    <!-- Date will be displayed here -->
+  </div>
+
+  <script>
+    // Set the desired date (25th February 2024)
+    var day = 25;
+    var month = 2; // February is 2 (zero-based index)
+    var year = 2024;
+
+    // Format the date as DD-MM-YYYY
+    var formattedDate = (day < 10 ? '0' : '') + day + '-' + (month < 10 ? '0' : '') + month + '-' + year;
+
+    // Display the formatted date in the div
+    document.getElementById('dateDisplay').textContent = 'See you on ' + formattedDate;
+  </script>
+</body>
+</html>
